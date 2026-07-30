@@ -1,4 +1,0 @@
-location ~ ^/(config|inc|database)/ {
-    deny all;
-    return 404;
-}
