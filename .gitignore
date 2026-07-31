@@ -33,3 +33,14 @@ cache/
 config.php
 database.php
 install.php
+
+# 临时备份文件
+*.bak
+*.bak.*
+
+# 图片素材
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
