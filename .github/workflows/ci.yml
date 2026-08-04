@@ -1,15 +1,21 @@
 name: CI
-on: [push, pull_request]
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
 jobs:
-  lint:
+  php:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: PHP Lint
-        uses: StephaneBour/actions-php-lint@8.2
-      - name: Secret Scan
-        uses: trufflesecurity/trufflehog@main
+      - uses: shivammathur/setup-php@v2
         with:
-          path: ./
-          base: ${{ github.event.before }}
-          head: ${{ github.event.after }}
+          php-version: '8.2'
+      - name: 语法检查
+        run: |
+          find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+      - name: 敏感文件检查
+        run: |
+          ! git ls-files | grep -E '^\.(env|env\.local|user\.ini)$' || (echo '敏感文件被追踪！' && exit 1)

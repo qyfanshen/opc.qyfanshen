@@ -44,3 +44,7 @@ install.php
 *.png
 *.gif
 *.webp
+storage/payment.key
+.git/
+runtime/
+storage/logs/
