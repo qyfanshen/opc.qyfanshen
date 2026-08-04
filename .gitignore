@@ -45,6 +45,10 @@ install.php
 *.gif
 *.webp
 storage/payment.key
+*.zip
+*.tar.gz
+*.tgz
+*.rar
 .git/
 runtime/
 storage/logs/
