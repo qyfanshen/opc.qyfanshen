@@ -3,6 +3,15 @@
 > Landing & Recruitment Hub for One-Person Company Ecosystem
 
 ![preview](screenshots/preview.png)
+<p align="center">
+  <a href="https://github.com/qyfanshen/opc.qyfanshen"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+  <a href="https://github.com/qyfanshen/opc.qyfanshen/actions"><img src="https://img.shields.io/github/actions/workflow/status/qyfanshen/opc.qyfanshen/ci.yml?branch=master&label=CI" alt="CI"></a>
+  <a href="https://img.shields.io/github/languages/code-size/qyfanshen/opc.qyfanshen"><img src="https://img.shields.io/github/languages/code-size/qyfanshen/opc.qyfanshen" alt="Code size"></a>
+  <a href="https://github.com/qyfanshen/opc.qyfanshen/issues"><img src="https://img.shields.io/github/issues/qyfanshen/opc.qyfanshen" alt="Issues"></a>
+  <a href="https://github.com/qyfanshen/opc.qyfanshen/stargazers"><img src="https://img.shields.io/github/stars/qyfanshen/opc.qyfanshen?style=social" alt="Stars"></a>
+</p>
+
+---
 
 [English](README.md) | [中文](README.zh.md)
 
@@ -48,7 +57,7 @@ Real screenshots captured via local server + headless Edge:
 
 ```bash
 # Clone the repository
-git clone https://gitee.com/qingyuanfanshenrengongzhineng/opc.qyfanshen.git
+git clone https://gitee.com/qyfanshen/opc.qyfanshen.git
 cd opc.qyfanshen.com
 
 # (PHP sites only) copy the env template and fill in your values
@@ -223,34 +232,22 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </FilesMatch>
 ```
 
-### 3. Docker（仅 Next.js）
-
-```dockerfile
-FROM node:22-alpine AS build
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci
-COPY . .
-RUN npm run build
-
-FROM node:22-alpine
-WORKDIR /app
-COPY --from=build /app/.next ./.next
-COPY --from=build /app/public ./public
-COPY --from=build /app/package*.json ./
-RUN npm ci --omit=dev
-EXPOSE 3000
-CMD ["npm", "start"]
-```
-
 ### 4. 部署后检查清单
 
 - [ ] HTTPS 已生效（浏览器锁图标）
-- [ ] `https://https://opc.qyfanshen.com/.env` 返回 404
+- [ ] `https://opc.qyfanshen.com/.env` 返回 404
 - [ ] 安全响应头可在 https://securityheaders.com 验证为 A 或 A+
 - [ ] sitemap.xml 可访问
 - [ ] robots.txt 可访问
 - [ ] 隐私页 `privacy.html` 可访问
+
+## Code of Conduct
+
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) — be kind and respectful.
+
+## Security
+
+Found a vulnerability? Read the [Security Policy](SECURITY.md) before reporting.
 
 ## Contributing
 
@@ -291,3 +288,9 @@ Scan the QR code below to add our enterprise WeChat for technical support and bu
 Or reach us at:
 - Website: <https://qyfanshen.com>
 - Issues: please use the in-repo issue templates
+
+---
+
+**Copyright © 2026 [qyfanshen](https://github.com/qyfanshen). All rights reserved.**
+
+Licensed under the [MIT License](LICENSE).
