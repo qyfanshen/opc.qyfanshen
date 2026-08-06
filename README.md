@@ -13,6 +13,8 @@
 
 ---
 
+**OPC Community** is the recruitment & landing hub for the one-person-company ecosystem — PHP-powered application flow, admin review and member management.
+
 [English](README.md) | [中文](README.zh.md)
 
 ## Key Scenarios
