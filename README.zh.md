@@ -2,6 +2,8 @@
 
 > OPC 一人公司生态社区招募落地站
 
+> 🚀 **[在线演示](https://opc.qyfanshen.com)** · 📚 **[文档](docs/)** · 📋 **[快速开始](docs/QUICKSTART.md)** · 🐛 **[反馈问题](https://github.com/qyfanshen/opc.qyfanshen/issues)** · ⭐ **[Star](https://github.com/qyfanshen/opc.qyfanshen)**
+
 ![预览](screenshots/preview.png)
 <p align="center">
   <a href="https://github.com/qyfanshen/opc.qyfanshen"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="许可证"></a>
