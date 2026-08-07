@@ -57,6 +57,10 @@ Real screenshots captured via local server + headless Edge:
 
 ## Quick Start
 
+> **Requirements**: PHP 8.0+ (with pdo_mysql extension), Python 3.8+ (for static preview)
+>
+> **Windows note**: if `git clone` fails with `unable to checkout working tree`, run `git config --global core.autocrlf false` first.
+
 Three commands to get started:
 
 ```bash
@@ -65,7 +69,20 @@ cd opc.qyfanshen.com
 python3 -m http.server 8080   # open http://localhost:8080
 ```
 
+**PHP launch** (recommended, supports form submission):
+
+```bash
+php -S 127.0.0.1:8080 -t .
+```
+
 > Full steps (Nginx, env vars, production) in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+## Troubleshooting
+
+- **`git clone` fails with `unable to checkout working tree`**: Windows line-ending issue — run `git config --global core.autocrlf false` and clone again.
+- **`submit.php` returns 500**: make sure the `pdo_mysql` PHP extension is installed and database settings in `config/app.php` are correct.
+- **Page opens but form submission fails**: use the PHP built-in server or Nginx+PHP-FPM; the static preview does not support POST endpoints.
+- **Port already in use**: use another port, e.g. `php -S 127.0.0.1:8000 -t .`.
+
 ## Usage Guide
 
 1. Configure your environment (`.env` for PHP, deploy config for static).

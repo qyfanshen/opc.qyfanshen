@@ -57,6 +57,10 @@
 
 ## 快速部署
 
+> **环境要求**：PHP 8.0+（含 pdo_mysql 扩展）、Python 3.8+（静态资源预览用）
+>
+> **Windows 提示**：如 `git clone` 报 `unable to checkout working tree`，先执行 `git config --global core.autocrlf false` 再克隆。
+
 三行命令即可启动：
 
 ```bash
@@ -65,7 +69,20 @@ cd opc.qyfanshen.com
 python3 -m http.server 8080   # open http://localhost:8080
 ```
 
+**PHP 启动方式**（推荐，支持表单提交）：
+
+```bash
+php -S 127.0.0.1:8080 -t .
+```
+
 > 完整步骤（Nginx、环境变量、生产部署）见 [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)。
+## 常见问题（Troubleshooting）
+
+- **`git clone` 报 `unable to checkout working tree`**：Windows 换行符兼容问题，先执行 `git config --global core.autocrlf false` 再克隆。
+- **`submit.php` 返回 500**：确认 PHP 已安装 `pdo_mysql` 扩展，且 `config/app.php` 数据库配置正确。
+- **页面能开但表单提交失败**：需要 PHP 内置服务器或 Nginx+PHP-FPM，纯静态预览不支持 POST 接口。
+- **端口被占用**：换端口，如 `php -S 127.0.0.1:8000 -t .`。
+
 ## 使用指南
 
 1. 配置环境（PHP 站填写 `.env`，静态站配置部署参数）
