@@ -10,7 +10,7 @@
   <a href="https://github.com/qyfanshen/opc.qyfanshen/actions"><img src="https://img.shields.io/github/actions/workflow/status/qyfanshen/opc.qyfanshen/ci.yml?branch=master&label=CI" alt="CI"></a>
   <a href="https://img.shields.io/github/languages/code-size/qyfanshen/opc.qyfanshen"><img src="https://img.shields.io/github/languages/code-size/qyfanshen/opc.qyfanshen" alt="Code size"></a>
   <a href="https://github.com/qyfanshen/opc.qyfanshen/issues"><img src="https://img.shields.io/github/issues/qyfanshen/opc.qyfanshen" alt="Issues"></a>
-  <a href="https://github.com/qyfanshen/opc.qyfanshen/stargazers"><img src="https://img.shields.io/github/stars/qyfanshen/opc.qyfanshen?style=social" alt="Stars"></a>
+  <a href="https://github.com/qyfanshen/opc.qyfanshen"><img src="https://img.shields.io/github/stars/qyfanshen/opc.qyfanshen?style=social" alt="Stars"></a>
 </p>
 
 ---
